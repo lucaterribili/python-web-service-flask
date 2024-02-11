@@ -7,7 +7,7 @@ from validation_requests.shadow_validation import validate_shadow
 flask_service = Flask(__name__)
 
 
-@app.route('/shadow', methods=['POST'])
+@flask_service.route('/shadow', methods=['POST'])
 def shadow():
     snakeORM = BasicORM()
     validation = validate_shadow(request)
